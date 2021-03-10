@@ -1,15 +1,4 @@
-/*Mise en place de la police personnalisée*/
-@font-face {
-	font-family: 'sinkin_sans400_regular';
-    src: url('fonts/../SinkinSans-400Regular-webfont.eot');
-    src: url('fonts/../SinkinSans-400Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/../SinkinSans-400Regular-webfont.woff2') format('woff2'),
-         url('fonts/../SinkinSans-400Regular-webfont.woff') format('woff'),
-         url('fonts/../SinkinSans-400Regular-webfont.ttf') format('truetype'),
-         url('fonts/../SinkinSans-400Regular-webfont.svg#sinkin_sans400_regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+/*fonts - style du texte*/ 
 
 @font-face {
 	font-family: 'sebastien-slab-round.regular';
@@ -19,206 +8,138 @@
 	font-style: normal;
 }
 
-/*Eléments principaux de la page*/
+@font-face {
+	font-family: 'agencyr';
+	src: url('./fonts/AGENCYR.TTF');
+	src: url('./fonts/AGENCYR.TTF') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: "ConthraxSb-Regular";
+    src: url('./fonts/font.woff2') format('woff2'), url('./fonts/font.woff') format('woff');
+    font-weight: normal;
+	font-style: normal;
+}
+
+/*corps de la page*/
 
 body
 {
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: right;
-	font-family: 'sebastien-slab-round.regular', 'sinkin_sans400_regular', "Verdana", "Arial", sans-serif;
+    background-color: #efee3e;
+    font-family: 'agencyr', 'ConthraxSb-Regular', 'sebastien-slab-round.regular', "Verdana", "Arial", sans-serif;
 }
 
-/*header*/
+/*l'entête*/
 
 header
 {
-	margin: auto;
-	display: flex;
-	justify-content: space-between;
-	/*box-shadow: 0px 0px 10px #2a2a2a;*/
-	/*border-bottom: 2px solid #2a2a2a;*/
+    display: flex;
+    margin: auto;
 }
+
+/*setup du logo*/
 
 #logo
 {
-	display: flex;
-	float: left;
-	margin-bottom: 20px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: #121212;
 }
 
 .logo
 {
-	width: 110%;
-	height: 110%;
+    position: absolute;
+    top: 27%;
+    left: 13%;
+    width: 70%;
+    height: auto;
 }
+
+/*menu de navigation*/
 
 #titre_nav
 {
-	position: absolute;
-	top: 30px;
-	right: 10px;
-	height: 8%;
-	width: 50%;
+    position: fixed;
+    top: 10px;
+    right: 0px;
+    width: 50%;
 }
-
-/*navigation*/
 
 nav ul
 {
-	list-style-type: none;
-	display: flex;
-	justify-content: space-between;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	box-shadow: 0px 5px 20px #1b588d;
-	border-radius: 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
 }
 
-nav li
+nav a
 {
-	display: flex;
-	justify-content: space-between;
-	margin-right: 40px;
-}
-
-nav a 
-{
-	font-size: 2em;
-	color: #2a2a2a;
-	text-decoration: none;
+    text-decoration: none;
+    color: #121212;
+    font-size: 2em;
+    font-weight: lighter;
 }
 
 nav a:hover
 {
-	color: #cf1717;
-	text-shadow: 0px 0px 10px #757575;
+    text-shadow: 0px 0px 10px #757575;
 }
 
-/*corps*/
+/*le contenu*/
 
-#first_section
+section
 {
-	margin-bottom: 300px;
-	margin-top: 150px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+    position: absolute;
+    left: 57%;
+    top: 23%;
 }
 
-#first_section article
+h1
 {
-	padding-top: 80px;
-	color: #1b588d;
-	padding-bottom: 80px;
+    font-size: 2.6em;
 }
 
-#first_section h1
+p
 {
-	justify-content: center;
-	background-color: #cb1717;
-	color: white;
-	font-size: 1.9em;
-	font-weight: normal;
-	border: 2px solid #cb1717;
-	border-radius: 15px;
-	text-align: center;
-	padding: 20px;
-	box-shadow: 2px 2px 30px #cb1717;
-	margin: auto;
-	width: 500px;
-/*	margin-bottom: 30px;*/
+    font-size: 1.5em;
+    width: 85%;
 }
 
-@keyframes exemple {
-	from {opacity: 100%;}
-	to {opacity: 10%;}
-}
-
-#seconde_section h2
+#emoji
 {
-	background-color: #2a2a2a;
-	font-size: 1.6em;
-	color: white;
-	text-align: right;
-	font-weight: normal;
-	padding: 30px;
-	border-radius: 0 20px;
-	margin-bottom: 50px;
+    font-size: 2.2em;
 }
 
-#seconde_section p
-{
-	color: #1b588d;
-	font-size: 1.4em;
-	display: flex;
-	justify-content: center;
-	line-height: 400px;
-}
-
-.photo_paul
-{
-	width: 30%;
-	box-shadow: 5px 5px 30px black;
-	border-radius: 10px;
-	margin-top: 10px;
-	margin-bottom: 20px;
-	margin-left: 50px;
-}
-
-.photo_oussmane
-{
-	width: 33%;
-	box-shadow: 5px 5px 30px black;
-	border-radius: 10px;
-	margin-top: 10px;
-	margin-bottom: 20px;
-	margin-right: 50px;
-}
-
-.photo_centrale
-{
-	width: 33%;
-	box-shadow: 5px 5px 30px black;
-	border-radius: 10px;
-	margin-top: 10px;
-	margin-bottom: 20px; 
-	margin-left: 50px;
-}
-
-
-
-/*footer*/
+/* pied de page*/
 
 footer
 {
-	display: flex;
-	border-top: 1px solid #2a2a2a;
-	padding-top: 25px;
-	padding-bottom: 30px;
-	font-size: 0.8em;
-	color: #2a2a2a;
-}
-
-footer a
-{
-	text-decoration: none;
-	color: #2a2a2a;
-}
-
-footer a:hover
-{
-	text-decoration: underline;
-}
-
-#nom_du_site
-{
-	width: 91%;
-	margin-left: 3px;
+    position: fixed;
+    right: 0px;
+    bottom: 10px;
+    width: 50%;
 }
 
 #contact
 {
-	width: 9%;
-	margin-right: 40px;
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+}
+
+footer a
+{
+    text-decoration: none;
+    color: #121212;
+    font-size: 1.3em;
+}
+
+footer a:hover
+{
+    text-decoration: underline;
 }
