@@ -1,0 +1,173 @@
+/*fonts - style du texte*/ 
+
+@font-face {
+	font-family: 'agencyr';
+	src: url('./fonts/AGENCYR.TTF');
+	src: url('./fonts/AGENCYR.TTF') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*corps de la page*/
+
+body
+{
+    margin: 0;
+    font-family: 'agencyr';
+}
+
+/*logo*/
+
+.left
+{
+    position: absolute;
+    left: 0;
+    background-color: #121212;
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+
+.left img 
+{
+    margin: auto;
+    max-width: 70%;
+    height: auto;
+}
+
+/*coté droit - contenu*/
+
+.right
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    background-color: #efee3e;
+    width: 50%;
+    height: 100%;
+}
+
+/*menu de navigation*/
+
+.right nav
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.right ul
+{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.right nav a
+{
+    text-decoration: none;
+    color: #121212;
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+.right nav a:hover
+{
+    text-shadow: 0px 0px 10px #757575;
+}
+
+/*text écrit*/
+
+.right .content
+{
+    width: 80%;
+    margin: 0 10%;
+}
+
+.right h1
+{
+    font-size: 2.6em;
+}
+
+.right p
+{
+    font-size: 1.5em;
+}
+
+/*bas de page*/
+
+.right .bottom
+{
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
+}
+
+.right .bottom a
+{
+    text-decoration: none;
+    color: #121212;
+    font-size: 1.3em;
+}
+
+.right .bottom a:hover
+{
+    text-decoration: underline;
+}
+
+/*media taille tablette*/
+
+@media screen and (max-width : 900px)
+{
+    .total
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left
+    {
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        height: 100px;
+    }
+
+    .left img 
+    {
+        max-width: 40%;
+        height: auto;
+        max-height: 90%;
+    }
+
+    .right
+    {
+        z-index: -1;
+        top: 0;
+        width: 100%;
+    }
+    
+    .right nav
+    {
+        top: 100px;
+    }
+}
+
+/*media taille téléphone*/
+
+@media screen and (max-width : 568px)
+{
+    .left
+    {
+        height: 80px;
+    }
+    .right nav
+    {
+        top: 80px;
+    }
+}
