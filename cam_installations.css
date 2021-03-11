@@ -29,11 +29,19 @@ body
     display: flex;
 }
 
-.left img 
+.left .logo_site
 {
-    margin: auto;
-    max-width: 70%;
     height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.left .logo
+{
+    width: 100%;
+    height: auto;
+    margin: auto;
 }
 
 /*coté droit - contenu*/
@@ -75,6 +83,11 @@ body
     color: #121212;
     font-size: 2em;
     font-weight: lighter;
+}
+
+.right .installations a
+{
+    color: #ce1717;
 }
 
 .right nav a:hover
@@ -151,6 +164,11 @@ body
         z-index: -1;
         top: 0;
         width: 100%;
+    }
+    
+    .right .installations
+    {
+        display: none;
     }
     
     .right nav

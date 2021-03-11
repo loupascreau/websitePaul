@@ -1,0 +1,305 @@
+/*fonts - style du texte*/ 
+
+@font-face {
+	font-family: 'agencyr';
+	src: url('./fonts/AGENCYR.TTF');
+	src: url('./fonts/AGENCYR.TTF') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*corps de la page*/
+
+body
+{
+    margin: 0;
+    font-family: 'agencyr';
+    background-color: #efee3e;
+}
+
+/*logo*/
+
+.left
+{
+    position: absolute;
+    left: 0;
+    background-color: #121212;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left .logo_site
+{
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.left .logo
+{
+    width: 75%;
+    height: auto;
+    margin: auto;
+}
+
+.left .content
+{
+    width: auto;
+    height: 40%;
+    margin: auto;
+}
+
+.left p
+{
+    font-size: 2em;
+    text-align: center;
+}
+
+.left a
+{
+    text-decoration: none;
+    color: #efee3e;
+}
+
+.left .content img
+{
+    width: 10%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/*coté droit - contenu*/
+
+.right
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    right: 0;
+    background-color: #efee3e;
+    width: 50%;
+    height: 100%;
+}
+
+/*menu de navigation*/
+
+.right nav
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.right ul
+{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.right nav a
+{
+    text-decoration: none;
+    color: #121212;
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+.right .contacts a
+{
+    color: #ce1717;
+}
+
+.right nav a:hover
+{
+    text-shadow: 0px 0px 10px #757575;
+}
+
+/*texte*/
+
+.right .content
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.right p
+{
+    font-size: 1.7em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+/*frame maps*/
+
+.right aside
+{
+    text-align: center;
+}
+
+.right iframe
+{
+    width: 450px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #121212;
+}
+
+/*bas de page*/
+
+.right .bottom
+{
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
+}
+
+.right .bottom a
+{
+    text-decoration: none;
+    color: #121212;
+    font-size: 1.3em;
+}
+
+.right .bottom a:hover
+{
+    text-decoration: underline;
+}
+
+/*media taille tablette*/
+
+@media screen and (max-width : 900px)
+{
+    .total
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left
+    {
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .left img 
+    {
+        max-width: 50%;
+        height: auto;
+        max-height: 90%;
+    }
+
+    .left .content
+    {
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .right
+    {
+        z-index: -1;
+        top: 0;
+        width: 100%;
+    }
+    
+    .right .contacts
+    {
+        display: none;
+    }
+    
+    .right nav
+    {
+        top: 200px;
+    }
+
+    .right .content
+    {
+        height: 28%;
+    }
+
+    .right p
+    {
+        margin-bottom: 25px;
+    }
+
+    .right .bottom
+    {
+        display: none;
+    }
+}
+
+/*media taille téléphone*/
+
+@media screen and (max-width : 580px)
+{
+    .left
+    {
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left .content p
+    {
+        margin: 0;
+        font-size: 1.6em;
+    }
+
+    .left .content
+    {
+        margin-bottom: 20px;
+    }
+
+    .right 
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .right nav
+    {
+        top: 240px;
+    }
+
+    .right h1
+    {
+        font-size: 1.8em;
+    }
+
+    .right .content
+    {
+        height: 0;
+    }
+
+    .right .content p
+    {
+        font-size: 1.4em;
+    }
+
+    .right iframe
+    {
+        width: 300px;
+        height: 200px;
+    }
+
+    .right .bottom a
+    {
+        font-size: 1.1em;
+    }
+}
